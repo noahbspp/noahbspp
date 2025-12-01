@@ -9,4 +9,4 @@
 - 🩷 Ask me about | Life things, Politics, Coding project, Or more 
 - 🩷 How to reach me: Discord @noahbsp
 
-
+- life dream become Prime Minister of Canada
