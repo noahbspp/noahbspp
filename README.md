@@ -2,6 +2,6 @@
 
 [![transcrimee's Streak](https://github-readme-streak-stats.herokuapp.com/?user=transcrimee&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
 
-[![transcrimee's Streak](https://gravatar.com/transcrimee.card)]
+![](https://gravatar.com/transcrimee.card)
 
 > - life dream become Prime Minister of Canada
