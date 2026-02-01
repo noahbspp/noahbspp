@@ -15,14 +15,93 @@
 
     body {
       font-family: "Source Code Pro", monospace;
-      background-color: #121212;
-      color: #e0e0e0;
+      background-color: #000000;
+      color: #ffffff;
       line-height: 1.6;
+      
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.651);
+  border: #b30000 1.9px solid;
+  border-radius: 5px;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  }
+
+     .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  }
+
+      .sidenav a:hover {
+  color: #ff0000;
+  }
+
+       .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+   }
+
+       @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+    }
+           
+    .nav_footer{
+      height: auto;
+      background:rgb(0, 0, 0)0;
+      padding: auto auto;
+      max-height:  80vh;
+      overflow: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 2px solid rgb(255, 0, 0);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
     }
 
+    button {
+     width: 150px;
+     height: 40px;
+     background-color: #00000000;
+     color: #b30000;
+     border-color: #b30000;
+     border: 1px solid red;
+     border-radius: 5px;
+     margin: 5px;
+     outline: 5px, #ff0000;
+    }
+
+    button:hover {
+      color: red;
+    }
+
+    button a {
+     text-decoration: none;
+    }
+    
+     button a :hover {
+     text-decoration: none;
+     color: red;
+     border-color: #ff0000;
+    }
+    
 
     nav {
-      background: #1a1a1a;
+      background: #000000;
       padding: 12px 24px;
       display: flex;
       justify-content: space-between;
@@ -36,10 +115,11 @@
       color: red;
       font-size: 1.8rem;
       font-weight: bold;
+      position: calc(center);
     }
 
     nav a {
-      color: #ccc;
+      color: #ffffff;
       margin-left: 20px;
       text-decoration: none;
       transition: 0.3s;
@@ -64,7 +144,7 @@
       display: block;
     }
 
-    h2 {
+    h1 {
       color: red;
       margin-bottom: 10px;
     }
@@ -116,6 +196,7 @@
 
       .logo {
         margin-bottom: 8px;
+        text-align: center;
       }
       
 .art-grid {
@@ -150,26 +231,42 @@
     grid-template-columns: 1fr; /* 1 column on phones */
   }
 }
+
+
   </style>
 </head>
 <body>
 
   <nav>
-    <div class="logo">qlilov</div>
+
+    <div class="logo">transcrime.com</div>
     <div>
       <a href="#" onclick="showTab('home')">Home</a>
-      <a href="#" onclick="showTab('resume')">Resume</a>
-      <a href="#" onclick="showTab('projects')">Showcase</a>
-      <a href="#" onclick="showTab('artwork')">Artwork</a>
+      <a href="#" onclick="showTab('resume')">Portfolio</a>
+      <a href="#" onclick="showTab('projects')">Project</a>
+      <a href="#" onclick="openNav()">&#9776; More </a>
+      <div id="mySidenav" class="sidenav">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       <a href="#home" >Home</a>
+       <a href="#about">About</a>
+       <a href="#contact">Contact</a>
+      </div>
     </div>
   </nav>
 
   <div class="container">
     <div id="home" class="tab active">
-      <h2>Welcome</h2>
+      <h1 align="center" >Welcome</h2>
       <p>Hi, I'm a developer/artist passionate about building secure, creative, and efficient tools or project for everyone and for free.</p>
-      <a href="https://github.com/qlilov"><img  src="icons8-github-64.png"></a> 
-      <a href="https://www.youtube.com/@Qlilovv"><img src="icons8-youtube-64.png"></a>
+      <br>
+      <p align="center">
+  <button><a class="social" href="https://github.com/transcrimee">Github</a></button>
+  ·
+  <button><a class="social"  href="https://www.youtube.com/@transcrimeee">Youtube</a></button>
+  .
+  <button><a class="social"  href="https://bsky.app/profile/transcrime.bio">Bluesky</a></button>
+</p>
+
     </div>
     <div id="resume" class="tab">
       <h2>Resume</h2>
@@ -232,5 +329,18 @@
     }
   </script>
 
+  <script>
+    function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+  </script>
+<footer>
+  
+</footer>
 </body>
 </html>
