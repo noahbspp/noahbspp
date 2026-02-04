@@ -1,0 +1,83 @@
+/* styles.css */
+body {
+    background-color: #ffffff;
+    background-image: url(hrrdmtjjey311.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    aspect-ratio: 16 / 9;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin: 0;
+}
+
+.bg-image {
+    background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  
+}
+
+.terminal {
+    width: 80%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border: 2px solid #555;
+    padding: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.575);
+    color: #ff81b6;
+}
+
+.output {
+    height: 400px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #ffffff;
+    color: #ff81b6;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.output {
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    color: #d3dae3; /* Light text color for output */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    user-select: none; /* Prevent text selection */
+    color: #8ec07c; /* Green color for prompt */
+}
+
+.input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    color: #d3dae3; /* Light text color for input */
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+}
+
+.input::placeholder {
+    color: #666; /* Placeholder color */
+}
