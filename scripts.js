@@ -41,7 +41,7 @@
                     case 'date':
                         return new Date().toString();
                     case 'help':
-                        return `Available commands: echo, date, ls, ll, la, cls`;
+                        return `Available commands: echo, date, ls, ll, la, cls, neofetch`;
                     case 'ls':
                         return 'file1.txt\nfile2.txt\ndirectory1';
                     case 'll':
@@ -51,6 +51,17 @@
                     case 'cls':
                         output.innerHTML = '';
                         return '';
+                    case 'neofetch':
+                          // 1. Define the async function
+                        const getNeofetch = async () => {
+                          try {
+                            const response = await fetch('neofetch.text');
+                            if (!response.ok) throw new Error('File not found');
+                              return await response.text(); 
+                              } catch (err) {
+                              return `Error: ${err.message}`;
+                             }
+                            };
                     default:
                         return `bash: ${command}: command not found`;
                 }
