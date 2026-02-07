@@ -28,13 +28,13 @@
  <div align="center" markdown="1">
   <h1>------------ My Social ------------</h1>
    
-  ![Static Badge](https://img.shields.io/badge/Youtube-you?style=for-the-badge&logo=Youtube&labelColor=red&color=red)
-  ![Static Badge](https://img.shields.io/badge/bluesky-you?style=for-the-badge&logo=bluesky&logoColor=white%20&labelColor=blue&color=blue)
-  ![Static Badge](https://img.shields.io/badge/mastodon-you?style=for-the-badge&logo=mastodon&logoColor=white%20&labelColor=blue&color=blue)
-  ![Static Badge](https://img.shields.io/badge/twitch-you?style=for-the-badge&logo=twitch&logoColor=white%20&labelColor=purple&color=purple)
-  ![Static Badge](https://img.shields.io/badge/gitlab-you?style=for-the-badge&logo=gitlab&logoColor=white%20&labelColor=orange&color=orange)
-  ![Static Badge](https://img.shields.io/badge/my%20server-you?style=for-the-badge&logo=discord&logoColor=white%20&labelColor=blue&color=blue)
-  ![Static Badge](https://img.shields.io/badge/Website-you?style=for-the-badge&logo=iterm2&logoColor=white%20&labelColor=navy&color=navy)
+  [![Youtube](https://img.shields.io/badge/Youtube-you?style=for-the-badge&logo=Youtube&labelColor=red&color=red)](https://www.youtube.com/channel/UCkAQWJQhkrVyZrSUVP4CTkA)
+  [![Bluesky](https://img.shields.io/badge/bluesky-you?style=for-the-badge&logo=bluesky&logoColor=white%20&labelColor=blue&color=blue)](https://bsky.app/profile/transcrime.bio)
+  [![Mastodon](https://img.shields.io/badge/mastodon-you?style=for-the-badge&logo=mastodon&logoColor=white%20&labelColor=blue&color=blue)](https://mastodon.social/@transcrime)
+  [![Twitch](https://img.shields.io/badge/twitch-you?style=for-the-badge&logo=twitch&logoColor=white%20&labelColor=purple&color=purple)](https://www.twitch.tv/transcrime)
+  [![Gitlab](https://img.shields.io/badge/gitlab-you?style=for-the-badge&logo=gitlab&logoColor=white%20&labelColor=orange&color=orange)](https://gitlab.com/transcrime)
+  ![Discord](https://img.shields.io/badge/my%20server-you?style=for-the-badge&logo=discord&logoColor=white%20&labelColor=blue&color=blue)
+  [![Website](https://img.shields.io/badge/Website-you?style=for-the-badge&logo=iterm2&logoColor=white%20&labelColor=navy&color=navy)](https://transcrimee.github.io/Transcrimee/)
 
 
   </div>
