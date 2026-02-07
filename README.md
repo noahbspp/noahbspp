@@ -25,5 +25,27 @@
 
   </div>
 
-</details>
+ <div align="center" markdown="1">
+  <h1>------------ My Social ------------</h1>
+   
+  ![Static Badge](https://img.shields.io/badge/Youtube-you?style=for-the-badge&logo=Youtube&labelColor=red&color=red)
+  ![Static Badge](https://img.shields.io/badge/bluesky-you?style=for-the-badge&logo=bluesky&logoColor=white%20&labelColor=blue&color=blue)
+  ![Static Badge](https://img.shields.io/badge/mastodon-you?style=for-the-badge&logo=mastodon&logoColor=white%20&labelColor=blue&color=blue)
+  ![Static Badge](https://img.shields.io/badge/twitch-you?style=for-the-badge&logo=twitch&logoColor=white%20&labelColor=purple&color=purple)
+  ![Static Badge](https://img.shields.io/badge/gitlab-you?style=for-the-badge&logo=gitlab&logoColor=white%20&labelColor=orange&color=orange)
+  ![Static Badge](https://img.shields.io/badge/my%20server-you?style=for-the-badge&logo=discord&logoColor=white%20&labelColor=blue&color=blue)
+  ![Static Badge](https://img.shields.io/badge/Website-you?style=for-the-badge&logo=iterm2&logoColor=white%20&labelColor=navy&color=navy)
+
+
+  </div>
+
+   <div align="center" markdown="1">
+  <h1>------------ My YouTube Stats ------------</h1>
+    
+![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCkAQWJQhkrVyZrSUVP4CTkA?style=for-the-badge)
+![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCkAQWJQhkrVyZrSUVP4CTkA?style=for-the-badge)
+
+  </div>
+
+
 
