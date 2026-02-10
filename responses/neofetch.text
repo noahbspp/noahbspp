@@ -1,0 +1,17 @@
+       _,met$$$$$gg.          user@host 
+    ,g$$$$$$$$$$$$$$$P.       --------- 
+  ,g$$P"     """Y$$P."        OS: Debian GNU/Linux 12.5 (bookworm) x86_64
+ ,$$P'              `$$$.     Kernel: 6.12.0-arch1-1 
+',$$P       ,ggs.     `$$b:   Uptime: 2 hours 
+`d$$'     ,$P"'   .    $$$    Packages: 900 
+ $$P      d$'     ,    $$P    Shell: bash 
+ $$:      $$.   -    ,d$$'    Resolution: 1920x1080 
+ $$;      Y$b._   _,g$$P'     DE: GNOME 
+ Y$$.    `.`"Y$$$$P"'         WM: Mutter 
+ `$$b      "-.__              Theme: Adwaita [GTK2/3] 
+  `Y$$b                       Icons: Adwaita [GTK2/3] 
+   `Y$$.                      Terminal: gnome-terminal 
+     `$$b.                    CPU: AMD Ryzen 9 9950X (16) @ 5.7GHz 
+       `Y$$b.                 GPU: AMD RX 9070 XT 
+         `"Y$b._              Memory: 2000MiB / 32000MiB 
+            `"""

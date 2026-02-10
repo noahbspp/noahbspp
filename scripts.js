@@ -1,4 +1,4 @@
-   document.addEventListener('DOMContentLoaded', () => {
+   document.addEventListener('DOMContentLoaded', async() => {
             const output = document.getElementById('output');
             const commandInput = document.getElementById('commandInput');
             let commandHistory = [];
@@ -6,14 +6,14 @@
 
             commandInput.focus();
 
-            commandInput.addEventListener('keydown', (e) => {
+            commandInput.addEventListener('keydown', async(e) => {
                 if (e.key === 'Enter') {
                     const command = commandInput.value.trim();
                     if (command) {
                         commandHistory.push(command);
                         historyIndex = commandHistory.length;
                         output.innerHTML += `<div><span class="prompt">user@terminal:~$ </span>${command}</div>`;
-                        const result = executeCommand(command);
+                        const result = await executeCommand(command);
                         output.innerHTML += `<div>${result}</div>`;
                         output.scrollTop = output.scrollHeight; // Scroll to the bottom
                     }
@@ -31,7 +31,7 @@
                 }
             });
 
-            function executeCommand(command) {
+             async function executeCommand(command) {
                 const args = command.split(' ');
                 const cmd = args.shift();
 
@@ -41,7 +41,7 @@
                     case 'date':
                         return new Date().toString();
                     case 'help':
-                        return `Available commands: echo, date, ls, ll, la, cls, neofetch`;
+                        return `Available commands: echo, date, ls, ll, la, cls, neofetch, aboutme, project`;
                     case 'ls':
                         return 'file1.txt\nfile2.txt\ndirectory1';
                     case 'll':
@@ -52,16 +52,23 @@
                         output.innerHTML = '';
                         return '';
                     case 'neofetch':
-                          // 1. Define the async function
-                        const getNeofetch = async () => {
-                          try {
-                            const response = await fetch('neofetch.text');
-                            if (!response.ok) throw new Error('File not found');
-                              return await response.text(); 
-                              } catch (err) {
-                              return `Error: ${err.message}`;
-                             }
-                            };
+                          const response = await fetch('/responses/neofetch.text');
+
+                          if (!response.ok) throw new Error('File not found');  
+                          
+                          return await response.text();          
+                    case 'aboutme':
+                          const about = await fetch('/responses/aboutme.text');
+
+                          if (!about.ok) throw new Error('File not found');
+
+                          return await about.text(); 
+                    case 'project':
+                          const project = await fetch('/responses/project.text');
+
+                          if (!project.ok) throw new Error('File not found');
+
+                          return await project.text(); 
                     default:
                         return `bash: ${command}: command not found`;
                 }
