@@ -3,43 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminal</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="/logo/gnubash.webp" type="image/png" >
+    
+    <title>Transcrime - Profile</title>
+    <link rel="icon" href="brvc63j20c751.gif" type="image/gif" >
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <audio id="hover-sfx" src="hover.mp3" preload="auto"></audio>
+    <audio id="click-sfx" src="audio/571818__rainialco__button-32.wav" preload="auto"></audio>
+    <audio id="bg-music" src="audio/NO COPYRIGHT LOFI MUSIC - Chill Shop (Deltarune) - MusaNCM - Music For Creators (128k) (1).mp3" loop></audio>
 </head>
-<body> 
-
-<div class=".desktop-background">
-<div class="icon-container">
-  <img src="https://img.icons8.com/?size=100&id=iCwcOoy8tOGw&format=png&color=000000" alt="Folder" class="desktop-icon">
-  <span class="icon-label">This PC</span>
-</div>
-
-<div class="icon-container">
-  <img src="https://img.icons8.com/?size=100&id=WWogVNJDSfZ5&format=png&color=000000" alt="Folder" class="desktop-icon">
-  <span class="icon-label">Private Stuff</span>
-</div>
-
-<div class="icon-container">
-  <img src="https://img.icons8.com/?size=100&id=O9pZv9tHbizl&format=png&color=000000" alt="Folder" class="desktop-icon">
-  <span class="icon-label">D:/Project Drive</span>
-</div>
-</div>
-
-
-  <div class="blurred-bg"></div>
-    <div class="terminal">
-        <div class="window-bar"><button class="window-bar-buttton">&times;</button></div>
-        <br>
-        <div id="output" class="output"></div>
-          <div class="input-container">
-            <span class="prompt">user@terminal:~$</span>
-            <input type="text" id="commandInput" class="input" autocomplete="off" >
-            </div>
+<body>
+   <nav class="navbar">
+    <div class="logo">TRANSCRIME</div>
+    <ul class="nav-links">
+        <li><a href="https://github.com/transcrimee">GITHUB</a></li>
+        <li><a href="#">PATREON</a></li>
+        <li><a href="#">DISCORD</a></li>
+    </ul>
+</nav>
+<br>
+<section class="hero-container">
+    <h2 id="typing-text">test</h2>
+</section>
+<div class="tab-container">
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="gta">texthere</button>
+        <button class="tab-btn" data-tab="rdr2">texthere</button>
+        <button class="tab-btn" data-tab="fivem">texthere</button>
+    </div>
+    <div class="tab-panels">
+        <div class="panel active" id="gta" align="center"><h3>texthere</h3>
+        
+        </div>
+        <div class="panel" id="rdr2" align="center"><h3>texthere</h3>
+        
+        </div>
+        <div class="panel" id="fivem" align="center"><h3>texthere</h3>
+        
         </div>
     </div>
-</div>
+<br>
+   <section class="mod-container">
+    <!-- Card 1 -->
+    <div class="mod-card">
+        <div class="card-img" style="background-image: url('texthere.jpg');"></div>
+        <div class="card-content">
+            <span class="badge">texthere</span>
+            <h3>texthere</h3>
+            <p>texthere</p>
+            <a class="btn-download" class="tab-btn" id="rdr2">View</a>
+        </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="mod-card">
+        <div class="card-img" style="background-image: url('texthere.jpg');"></div>
+        <div class="card-content">
+            <span class="badge">texthere</span>
+            <h3>texthere</h3>
+            <p>texthere</p>
+            <a  class="btn-download" class="tab-btn active" data-tab="gta">View</a>
+        </div>
+    </div>
+</section>
 
-    <script src="scripts.js"></script>
+</div>
 </body>
 </html>
