@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Make sure these files exist in your folder!
     const hoverSfx = new Audio('hover.mp3');
     const clickSfx = new Audio('audio/571818__rainialco__button-32.wav');
-    const bgMusic = new Audio('audio/[3 hours] Deltarune lofi beats to relax⧸study to [V2BaYgDJrLQ].mp3');
+    const bgMusic = new Audio('audio/NO COPYRIGHT LOFI MUSIC - Chill Shop (Deltarune) - MusaNCM - Music For Creators (128k) (1).mp3');
     
     bgMusic.loop = true;
     bgMusic.volume = 0.15; // Keep it subtle
