@@ -2,12 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // --- AUDIO SETUP ---
     // Make sure these files exist in your folder!
-    const hoverSfx = new Audio('audio/836201__matustrm__ui_hover.wav');
-    const clickSfx = new Audio('audio/571818__rainialco__button-32.wav');
-    const bgMusic = new Audio('audio/NO COPYRIGHT LOFI MUSIC - Chill Shop (Deltarune) - MusaNCM - Music For Creators (128k) (1).mp3');
+    const hoverSfx = new Audio('/audio/836201__matustrm__ui_hover.wav');
+    const clickSfx = new Audio('/audio/571818__rainialco__button-32.wav');
     
-    bgMusic.loop = true;
-    bgMusic.volume = 0.15; // Keep it subtle
+    // Keep it subtle
     hoverSfx.volume = 0.1;
 
     // --- 1. THE LOOPING TYPING ENGINE ---
@@ -52,31 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-   const toggleAudio = (clickedBtn) => {
-        // Toggle play/pause or mute state
-        if (bgMusic.paused) {
-            bgMusic.play();
-            bgMusic.muted = false;
-        } else {
-            bgMusic.muted = !bgMusic.muted;
-        }
-
-       const isActuallyPlaying = !bgMusic.paused && !bgMusic.muted;
-       const label = isActuallyPlaying ? "▶ MUTE AMBIENCE" : "⏸ UNMUTE AMBIENCE";
-
-    // 3. Update ALL mute buttons
-    document.querySelectorAll('#unmute-btn').forEach(btn => {
-        btn.textContent = label;
-        
-        if (isActuallyPlaying) {
-            btn.classList.add('active'); // Light up when music is on
-        } else {
-            btn.classList.remove('active'); // Dim when muted/paused
-        }
-    });
-
-    if (typeof refreshObserver === 'function') refreshObserver();
-};
 
 
     // Attach listeners to mute buttons
@@ -88,33 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-  tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const targetId = button.getAttribute('data-tab');
-            const targetPanel = document.getElementById(targetId);
-
-            if (!targetPanel) return;
-
-            // 1. Reset all tabs and panels
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabPanels.forEach(panel => {
-                panel.classList.remove('active', 'show'); // Remove 'show' to reset fade
-            });
-
-            // 2. Activate the clicked tab
-            button.classList.add('active');
-
-            // 3. Activate and Fade-In the target panel
-            targetPanel.classList.add('active');
-            
-            // Small timeout allows 'display: block' to trigger before the opacity transition
-            setTimeout(() => {
-                targetPanel.classList.add('show');
-                // Re-run observer to catch cards inside the newly visible panel
-                refreshObserver();
-            }, 50);
-        });
-    });
+  
 
     // --- 3. THE SCROLL REVEAL ---
     let observer;
