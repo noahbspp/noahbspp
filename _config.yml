@@ -1,4 +1,5 @@
 url: "https://transcrime.com"
 baseurl: "/Transcrimee"
+layout: default
 permalink: /:basename/
 permalink: /404.html
