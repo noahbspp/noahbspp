@@ -259,24 +259,36 @@ body {
     text-shadow: 0 0 15px #fff; /* Bloom Effect */
 }
 
+.tab-text {
+font-family: "Blinker", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    text-shadow: 0 0 15px #fff;
+}
+
 .panel {
     display: none; /* Hide panels by default */
     opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1.0s ease-out, transform 1.0s ease-out;
 }
 
 
 .panel.active {
-    display: contents; /* Use grid to show mod cards */
+     display: block; /* Use grid to show mod cards */
     grid-template-columns: repeat(auto-fit, minmax(500px, 5fr));
     gap: 2rem;
-    animation: panelFadeIn 0.6s forwards;
-    align-items: left;
+    
+    align-items: start;
     text-align: left;
 }
 
-@keyframes panelFadeIn {
-    to { opacity: 1; }
+.panel.show {
+    opacity: 1;
+    transform: translateY(0);
 }
+
 
 .unmute-btn {
    background: none;

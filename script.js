@@ -88,14 +88,31 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    tabButtons.forEach(button => {
+  tabButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const target = button.getAttribute('data-tab');
+            const targetId = button.getAttribute('data-tab');
+            const targetPanel = document.getElementById(targetId);
+
+            if (!targetPanel) return;
+
+            // 1. Reset all tabs and panels
             tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabPanels.forEach(panel => panel.classList.remove('active'));
+            tabPanels.forEach(panel => {
+                panel.classList.remove('active', 'show'); // Remove 'show' to reset fade
+            });
+
+            // 2. Activate the clicked tab
             button.classList.add('active');
-            document.getElementById(target).classList.add('active');
-            refreshObserver();
+
+            // 3. Activate and Fade-In the target panel
+            targetPanel.classList.add('active');
+            
+            // Small timeout allows 'display: block' to trigger before the opacity transition
+            setTimeout(() => {
+                targetPanel.classList.add('show');
+                // Re-run observer to catch cards inside the newly visible panel
+                refreshObserver();
+            }, 50);
         });
     });
 
