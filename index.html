@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
     <script src="script.js"></script>
     <audio id="hover-sfx" src="audio/836201__matustrm__ui_hover.wav" preload="auto"></audio>
     <audio id="click-sfx" src="audio/571818__rainialco__button-32.wav" preload="auto"></audio>
@@ -21,8 +25,8 @@
     <div class="logo">TRANSCRIME</div>
     <ul class="nav-links">
         <li><a href="https://github.com/transcrimee">GITHUB</a></li>
-        <li><a href="#">PATREON</a></li>
-        <li><a href="#">DISCORD</a></li>
+        <li><a href="{{ '/404/' | relative_url }}">PATREON</a></li>
+        <li><a href="{{ '/404/' | relative_url }}">DISCORD</a></li>
     </ul>
 </nav>
  <!-- HEADER -->
@@ -38,7 +42,7 @@
 <div class="tab-container">
     <div class="tabs">
         <!-- TAB 1 -->
-        <button class="tab-btn active" data-tab="BIN_PROJECT">BIN_PROJECT</button>
+        <button class="tab-btn" data-tab="BIN_PROJECT">BIN_PROJECT</button>
         <!-- TAB 1 -->
         <!-- TAB 2 -->
         <button class="tab-btn" data-tab="fivem">DEV_LOGS</button>
@@ -46,7 +50,7 @@
     </div>
     <div class="tab-panels">
         <!-- TAB 1 -->
-        <div class="panel active" id="BIN_PROJECT"><h3 align="center" >texthere</h3>
+        <div class="panel active" id="BIN_PROJECT"><h3 align="center" class="tab-text" >PROJECT</h3>
         <!-- TAB 1 -->
             <section class="mod-container">
                 <!-- Card 1 -->
@@ -57,7 +61,7 @@
                             <span class="badge">Python</span>
                             <h3>dhgs-tool</h3>
                             <p>dhgs-tool or (DHGS) it's a multi-tool that puts all my other projects into one, it has denial of service tools but I'm trying the currently add is automation for get clones in arch builds (AUR)</p>
-                            <a class="btn-download" class="tab-btn" id="rdr2">View</a>
+                            <a class="btn-download" class="tab-btn" id="rdr2" href="{{ '/404/' | relative_url }}">View</a>
                         </div>
                     </div>
                 </div>
@@ -69,14 +73,14 @@
                             <span class="badge">Python</span>
                             <h3>LiveChatPython</h3>
                             <p>LiveChatPython is a application I made for streaming on YouTube as has it overlay that was different from other people really just a fun project</p>
-                            <a class="btn-download" class="tab-btn active" data-tab="gta">View</a>
+                            <a class="btn-download" class="tab-btn active" data-tab="gta" href="{{ '/404/' | relative_url }}">View</a>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
         <!-- TAB 2 -->
-        <div class="panel" id="fivem"><h3 align="center">texthere</h3>
+        <div class="panel" id="fivem"><h3 align="center" class="tab-text">texthere</h3>
         <!-- TAB 2 -->
         <section class="mod-container">
             <!-- Card 1 -->
