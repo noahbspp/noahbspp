@@ -31,25 +31,97 @@ body {
     padding: 4rem;
 }
 
-.mod-card {
+.mod-card-NEW {
+    position: relative; /* Essential for the layer to sit inside */
     background: var(--glass);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     overflow: hidden;
     backdrop-filter: blur(10px);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease;
+    z-index: 1;
 }
 
-.mod-card:hover {
-    transform: translateY(-10px) scale(1.02); /* Smooth lift effect */
+/* This is your image layer */
+.mod-card-NEW::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* Fills the whole card */
+    background-image: url("background/livechatpython-readme-header.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.9s ease; /* Here is your 0.9s fade */
+    z-index: -1; /* Keeps image behind your text/content */
+}
+
+.mod-card-NEW:hover {
+    transform: translateY(-10px) scale(1.02);
     border-color: var(--accent);
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Reveal the image layer on hover */
+.mod-card-NEW:hover::before {
+    opacity: 1;
+}
+
+
+.mod-card-OLD {
+    position: relative; /* Essential for the layer to sit inside */
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease;
+    z-index: 1;
+}
+
+/* This is your image layer */
+.mod-card-OLD::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* Fills the whole card */
+    background-image: url("background/dhgs-tool-readme-header.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.9s ease; /* Here is your 0.9s fade */
+    z-index: -1; /* Keeps image behind your text/content */
+}
+
+.mod-card-OLD:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Reveal the image layer on hover */
+.mod-card-OLD:hover::before {
+    opacity: 1;
 }
 
 .card-img {
     height: 200px;
     background-size: cover;
     background-position: center;
+    
+    
+}
+
+
+
+.blr {
+  background-color: rgba(255, 255, 255, 0); /* Translucent */
+  transition: backdrop-filter 0.3s ease, background-color 0.3s ease; /* Smooth hover */
+}
+
+/* 2. Hover Effect: Add the blur */
+.blr:hover {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0); /* Make it slightly more opaque on hover */
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
 }
 
 .card-content { padding: 1.5rem; }
@@ -192,11 +264,14 @@ body {
     opacity: 0;
 }
 
+
 .panel.active {
-    display: grid; /* Use grid to show mod cards */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: contents; /* Use grid to show mod cards */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 5fr));
     gap: 2rem;
     animation: panelFadeIn 0.6s forwards;
+    align-items: left;
+    text-align: left;
 }
 
 @keyframes panelFadeIn {
@@ -222,3 +297,4 @@ body {
     border-bottom: 2px solid #fff;
     text-shadow: 0 0 15px #fff; /* Bloom Effect */
 }
+
