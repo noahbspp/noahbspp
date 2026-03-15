@@ -202,3 +202,23 @@ body {
 @keyframes panelFadeIn {
     to { opacity: 1; }
 }
+
+.unmute-btn {
+   background: none;
+    border: none;
+    color: rgba(255,255,255,0.4);
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.4s;
+    border-bottom: 2px solid transparent;
+}
+
+
+
+.unmute-btn.active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    text-shadow: 0 0 15px #fff; /* Bloom Effect */
+}

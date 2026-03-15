@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // --- AUDIO SETUP ---
     // Make sure these files exist in your folder!
-    const hoverSfx = new Audio('hover.mp3');
+    const hoverSfx = new Audio('audio/836201__matustrm__ui_hover.wav');
     const clickSfx = new Audio('audio/571818__rainialco__button-32.wav');
     const bgMusic = new Audio('audio/NO COPYRIGHT LOFI MUSIC - Chill Shop (Deltarune) - MusaNCM - Music For Creators (128k) (1).mp3');
     
@@ -33,12 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- 2. THE TAB & SOUND SYSTEM ---
     const tabButtons = document.querySelectorAll('.tab-btn');
+    const muteBtn = document.querySelectorAll('#unmute-btn');
     const tabPanels = document.querySelectorAll('.panel');
     const navLinks = document.querySelectorAll('.nav-links a, .btn-download');
 
     // Function to play sounds
     const playHover = () => { hoverSfx.currentTime = 0; hoverSfx.play().catch(()=>{}); };
     const playClick = () => { clickSfx.currentTime = 0; clickSfx.play(); };
+    
 
     // Attach sounds to all interactive elements
     [...tabButtons, ...navLinks].forEach(el => {
@@ -47,6 +49,42 @@ document.addEventListener("DOMContentLoaded", () => {
             playClick();
             // Start background music on first interaction
             if (bgMusic.paused) bgMusic.play();
+        });
+    });
+
+   const toggleAudio = (clickedBtn) => {
+        // Toggle play/pause or mute state
+        if (bgMusic.paused) {
+            bgMusic.play();
+            bgMusic.muted = false;
+        } else {
+            bgMusic.muted = !bgMusic.muted;
+        }
+
+       const isActuallyPlaying = !bgMusic.paused && !bgMusic.muted;
+       const label = isActuallyPlaying ? "▶ MUTE AMBIENCE" : "⏸ UNMUTE AMBIENCE";
+
+    // 3. Update ALL mute buttons
+    document.querySelectorAll('#unmute-btn').forEach(btn => {
+        btn.textContent = label;
+        
+        if (isActuallyPlaying) {
+            btn.classList.add('active'); // Light up when music is on
+        } else {
+            btn.classList.remove('active'); // Dim when muted/paused
+        }
+    });
+
+    if (typeof refreshObserver === 'function') refreshObserver();
+};
+
+
+    // Attach listeners to mute buttons
+    muteBtn.forEach(btn => {
+        btn.addEventListener('mouseenter', playHover);
+        btn.addEventListener('click', () => {
+            playClick();
+            toggleAudio(btn);
         });
     });
 
