@@ -1,3 +1,4 @@
 url: "https://transcrime.com"
 baseurl: "/Transcrimee"
 permalink: /:basename/
+permalink: /404.html
