@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // --- AUDIO SETUP ---
     // Make sure these files exist in your folder!
-    const hoverSfx = new Audio('/audio/836201__matustrm__ui_hover.wav');
-    const clickSfx = new Audio('/audio/571818__rainialco__button-32.wav');
+    const hoverSfx = new Audio('/audio/836201__matustrm__ui_hover.opus');
+    const clickSfx = new Audio('/audio/571818__rainialco__button-32.opus');
     
     // Keep it subtle
     hoverSfx.volume = 0.1;
