@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // --- AUDIO SETUP ---
     // Make sure these files exist in your folder!
-    const hoverSfx = new Audio('audio/836201__matustrm__ui_hover.wav');
-    const clickSfx = new Audio('audio/571818__rainialco__button-32.wav');
-    const bgMusic = new Audio('audio/NO COPYRIGHT LOFI MUSIC - Chill Shop (Deltarune) - MusaNCM - Music For Creators (128k) (1).mp3');
+    const hoverSfx = new Audio('audio/836201__matustrm__ui_hover.opus');
+    const clickSfx = new Audio('audio/571818__rainialco__button-32.opus');
+    const bgMusic = new Audio('audio/Chill- Shop-(Deltarune)-MusaNCM -(96k).opus');
     
     bgMusic.loop = true;
     bgMusic.volume = 0.15; // Keep it subtle
