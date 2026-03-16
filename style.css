@@ -47,7 +47,7 @@ body {
     content: "";
     position: absolute;
     inset: 0; /* Fills the whole card */
-    background-image: url("background/livechatpython-readme-header.png");
+    background-image: url("background/livechatpython-readme-header.WebP");
     background-size: cover;
     background-position: center;
     opacity: 0; /* Start hidden */
@@ -83,7 +83,7 @@ body {
     content: "";
     position: absolute;
     inset: 0; /* Fills the whole card */
-    background-image: url("background/dhgs-tool-readme-header.png");
+    background-image: url("background/dhgs-tool-readme-header.WebP");
     background-size: cover;
     background-position: center;
     opacity: 0; /* Start hidden */
