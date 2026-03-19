@@ -310,3 +310,97 @@ font-family: "Blinker", sans-serif;
     text-shadow: 0 0 15px #fff; /* Bloom Effect */
 }
 
+.stats-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.stats-card {
+    position: relative;
+    width: 350px;
+    background: var(--glass, rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease;
+    z-index: 1;
+}
+
+/* Hover Background Image Layer */
+.stats-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-img);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    z-index: -1;
+}
+
+.stats-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--accent, #58a6ff);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.stats-card:hover::before {
+    opacity: 1;
+}
+
+.stats-img {
+    height: 140px;
+    border-radius: 10px;
+    width: 140px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background-size: cover;
+    background-position: center;
+    overflow: visible;
+    margin: 10px;
+    object-fit: contain;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats-content {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+}
+
+.stats-content span {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Major Mono Display', monospace;
+}
+
+.stats-content b {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.stats-content:hover span {
+    text-shadow: 0 0 15px #ffffff;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease; /* Adds a smooth glow effect */
+}
+
+.blr-stats {
+  background-color: rgba(0, 0, 0, 0.589); /* Translucent */
+  transition: backdrop-filter 0.3s ease, background-color 0.3s ease; /* Smooth hover */
+  overflow: hidden;
+  
+}
+
+.blr-stats::hover {
+  backdrop-filter: blur(9px);
+  background-color: rgba(0, 0, 0, 0.829); /* Make it slightly more opaque on hover */
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+.text {
+ color: #ffffff;
+}
