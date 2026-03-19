@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
     <script src="script.js"></script>
+    <script src="scripts/api_fetch.js"></script>
     <audio id="hover-sfx" src="audio/836201__matustrm__ui_hover.opus" preload="auto"></audio>
     <audio id="click-sfx" src="audio/571818__rainialco__button-32.opus" preload="auto"></audio>
     <audio id="bg-music" src="audio/Chill- Shop-(Deltarune)-MusaNCM -(96k).opus" loop></audio>
@@ -46,12 +47,12 @@
         <button class="tab-btn" data-tab="BIN_PROJECT">BIN_PROJECT</button>
         <!-- TAB 1 -->
         <!-- TAB 2 -->
-        <button class="tab-btn" data-tab="fivem">DEV_LOGS</button>
+        <button class="tab-btn" data-tab="GITHUB_STATS">GITHUB_STATS</button>
         <!-- TAB 2 -->
     </div>
     <div class="tab-panels">
         <!-- TAB 1 -->
-        <div class="panel active" id="BIN_PROJECT"><h3 align="center" class="tab-text" >PROJECT</h3>
+        <div class="panel" id="BIN_PROJECT"><h3 align="center" class="tab-text" >PROJECT</h3>
         <!-- TAB 1 -->
             <section class="mod-container">
                 <!-- Card 1 -->
@@ -81,38 +82,30 @@
             </section>
         </div>
         <!-- TAB 2 -->
-        <div class="panel" id="fivem"><h3 align="center" class="tab-text">texthere</h3>
+        <div class="panel" id="GITHUB_STATS"><h3 align="center" class="tab-text">GITHUB STATS</h3>
         <!-- TAB 2 -->
-        <section class="mod-container">
+        <section class="stats-container">
             <!-- Card 1 -->
-            <div class="mod-card">
-                <div class="blr">
-                    <div class="card-img"></div>
-                    <div class="card-content">
-                        <span class="badge">texthere</span>
-                        <h3>texthere</h3>
-                        <p>texthere</p>
-                        <a class="btn-download" class="tab-btn" id="r2">View</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="mod-card">
-                <div class="blr">
-                    <div class="card-img"></div>
-                    <div class="card-content">
-                        <span class="badge">texthere</span>
-                        <h3>texthere</h3>
-                        <p>texthere</p>
-                        <a class="btn-download" class="tab-btn active" data-tab="gta">View</a>
+            <div class="stats-card">
+                <div class="blr-stats">
+                    <div class="stats-img" id="user-avatar"></div>
+                    <div class="stats-content">
+                    <span>Followers: <b id="followers" class="text">0</b></span>
+                    <span>Public Repos: <b id="repos" class="text">0</b></span>
+                    <span>Commits: <b id="repo-commits" class="text">0</b></span>
+                    <span>Following: <b id="following" class="text">0</b></span>
+                    <span>User: <b id="github-name" class="text">Loading...</b></span>
+                    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 5px 0;">
+                    <span>Repo Stars: <b id="repo-stars" class="text">0</b></span>
+                    <span>Language: <b id="repo-lang" class="text">...</b></span>
+                    <span>Forks: <b id="repo-forks" class="text">0</b></span>
+                    <span>Repo: <b id="repo-name" class="text">Loading...</b></span>
                     </div>
                 </div>
             </div>
         </section>
         </div>
     </div>
-
-
 </div>
 </body>
 </html>
