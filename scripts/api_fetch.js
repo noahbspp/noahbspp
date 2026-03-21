@@ -32,20 +32,10 @@ async function fetchGitHubStats() {
             const forks = repos.reduce((s, r) => s + (r.forks_count || 0), 0);
             
             // --- NEW: Fetch Commits for ALL repos ---
-            const commitPromises = repos.map(repo => 
-                fetch(`https://api.github.com{username}/${repo.name}/commits?per_page=1`)
-                .then(res => {
-                    const link = res.headers.get('Link');
-                    if (link) {
-                        const match = link.match(/page=(\d+)>; rel="last"/);
-                        return match ? parseInt(match[1]) : 1;
-                    }
-                    return 1;
-                }).catch(() => 0)
-            );
-            
-            const commitCounts = await Promise.all(commitPromises);
-            const totalCommits = commitCounts.reduce((a, b) => a + b, 0);
+           const res = await fetch(`https://awesome-github-stats.azurewebsites.net/user-stats/transcrimee/rank`)
+           const data = await res.json();
+           
+           const totalCommits = data.userStats.commits;
             // ---------------------------------------
 
             const langs = repos.map(r => r.language).filter(l => l);
