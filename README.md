@@ -44,7 +44,7 @@ I'm a **Software Developer**, **Cybersecurity Analyst**, *passionate about onlin
   <h1>------------ My Social ------------</h1>
   <a href="https://www.youtube.com/channel/UCkAQWJQhkrVyZrSUVP4CTkA"><img src="https://img.shields.io/badge/Youtube-you?style=for-the-badge&logo=Youtube&labelColor=red&color=red" /></a>
   <a href="https://bsky.app/profile/transcrime.bio"><img src="https://img.shields.io/badge/bluesky-you?style=for-the-badge&logo=bluesky&logoColor=white%20&labelColor=blue&color=blue" /></a>
-  <a href="https://mastodon.social/@transcrime"><img src="https://img.shields.io/badge/mastodon-you?style=for-the-badge&logo=mastodon&logoColor=white%20&labelColor=blue&color=blue" /></a>
+  <a rel="me" href="https://mastodon.social/@transcrime"><img src="https://img.shields.io/badge/mastodon-you?style=for-the-badge&logo=mastodon&logoColor=white%20&labelColor=blue&color=blue" /></a>
   <a href="https://www.twitch.tv/transcrime"><img src="https://img.shields.io/badge/twitch-you?style=for-the-badge&logo=twitch&logoColor=white%20&labelColor=purple&color=purple" /></a>
   <a href="https://gitlab.com/transcrime"><img src="https://img.shields.io/badge/gitlab-you?style=for-the-badge&logo=gitlab&logoColor=white%20&labelColor=orange&color=orange" /></a>
   <a href="https://discord.gg"><img src="https://img.shields.io/badge/my%20server-you?style=for-the-badge&logo=discord&logoColor=white%20&labelColor=blue&color=blue" /></a>
