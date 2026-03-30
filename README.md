@@ -66,5 +66,3 @@ I'm a **Software Developer**, **Cybersecurity Analyst**, *passionate about onlin
   <h1>------------ My daily used Tool ------------</h1>
   <img src="https://skillicons.dev/icons?i=git,windows,linux,docker,vscode,discord,blender,unity" />
 </div>
-
-<a rel="me" href="https://mastodon.social/@transcrime">Mastodon</a>
