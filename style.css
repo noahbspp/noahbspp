@@ -1,428 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* style.css */
 :root {
-    /* Deep gaming tones: Dark Grey to Deep Charcoal to Subtle Navy */
-    --bg-gradient: linear-gradient(45deg, #0a0a0a, #1a1a1a, #0f172ad5, #1a1a1a);
-    --accent: #ed16db;
-}   
+  --bg-gradient: linear-gradient(45deg, #0a0a0a, #1a1a1a, #0f172ad5, #1a1a1a);
+  --accent-blue: #89CFF0;
+  --accent-cyan: #00FFFF;
+  --accent-back: #161616;
+  --accent-lightblack: #2c2c2c;
+  --text-gradient: linear-gradient(to right, var(--accent-blue), var(--accent-cyan));
+  
+  font-family: 'Inter', Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #f6f6f6;
+  
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-body {
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-family: 'Inter', sans-serif;
-    /* Remove background from here so it doesn't double up */
-    background-color: #0a0a0a; 
-    overflow-x: hidden;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: -5%;
-    left: -5%;
-    width: 110%;
-    height: 110%;
-    
-    /* Stacked Background */
-    background: var(--bg-gradient), url('background/giphy.gif');
-    
-    /* Crucial for animation: Make the background larger than the container */
-    background-size: 400% 400%, cover; 
-    background-attachment: fixed;
-    background-position: center;
-    
-    /* Run the animation */
-    animation: gradientShift 25s ease infinite;
-    
-    filter: blur(8px);
-    z-index: -1;
-}
-
-
-
-/* The Animation: Moves the "camera" across the giant gradient */
-@keyframes gradientShift {
-    0% { background-position: 0% 10%; }
-    50% { background-position: 10% 45%; }
-    100% { background-position: 0% 10%; }
-}
-
-.mod-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Fully responsive grid */
-    gap: 2rem;
-    padding: 4rem;
-}
-
-.mod-card-NEW {
-    position: relative; /* Essential for the layer to sit inside */
-    background: var(--glass);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease;
-    z-index: 1;
-}
-
-/* This is your image layer */
-.mod-card-NEW::before {
-    content: "";
-    position: absolute;
-    inset: 0; /* Fills the whole card */
-    background-image: url("background/livechatpython-readme-header.WebP");
-    background-size: cover;
-    background-position: center;
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.9s ease; /* Here is your 0.9s fade */
-    z-index: -1; /* Keeps image behind your text/content */
-}
-
-.mod-card-NEW:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: var(--accent);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-/* Reveal the image layer on hover */
-.mod-card-NEW:hover::before {
-    opacity: 1;
-}
-
-
-.mod-card-OLD {
-    position: relative; /* Essential for the layer to sit inside */
-    background: var(--glass);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease;
-    z-index: 1;
-}
-
-/* This is your image layer */
-.mod-card-OLD::before {
-    content: "";
-    position: absolute;
-    inset: 0; /* Fills the whole card */
-    background-image: url("background/dhgs-tool-readme-header.WebP");
-    background-size: cover;
-    background-position: center;
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.9s ease; /* Here is your 0.9s fade */
-    z-index: -1; /* Keeps image behind your text/content */
-}
-
-.mod-card-OLD:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: var(--accent);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-/* Reveal the image layer on hover */
-.mod-card-OLD:hover::before {
-    opacity: 1;
-}
-
-.card-img {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    
-    
-}
-
-
-
-.blr {
-  background-color: rgba(255, 255, 255, 0); /* Translucent */
-  transition: backdrop-filter 0.3s ease, background-color 0.3s ease; /* Smooth hover */
-}
-
-/* 2. Hover Effect: Add the blur */
-.blr:hover {
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 0); /* Make it slightly more opaque on hover */
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-}
-
-.card-content { padding: 1.5rem; }
-
-.badge {
-    background: var(--accent);
-    font-size: 0.7rem;
-    padding: 3px 8px;
-    border-radius: 4px;
-    text-transform: uppercase;
-}
-
-.btn-download {
-    display: inline-block;
-    margin-top: 1rem;
-    color: white;
-    text-decoration: none;
-    border: 1px solid var(--accent);
-    padding: 8px 20px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.btn-download:hover { background: var(--accent); }
-
-.navbar {
-    display: flex;
-    /* Pushes Logo to far left, Links to far right */
-    justify-content: space-between; 
-    align-items: center;
-    
-    width: 100%;
-    padding: 2rem 4rem; /* Adds padding so they don't touch the screen edges */
-    box-sizing: border-box;
+#network-canvas {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
-    
-    /* Subtle dark gradient for visibility */
-    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #ffffff; /* Dark navy theme */
 }
 
-.logo {
-    font-family: 'Major Mono Display', monospace;
-    font-size: 1.8rem;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    /* The Bloom Glow */
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 
-                 0 0 30px rgba(255, 255, 255, 0.3);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 40px; /* Space between each link */
+/* 1. General Resets & Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-image: 
+        linear-gradient(to top, #000000, #ffffff); 
+
+    color: #f1f5f9; /* Off-white text */
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #999;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    transition: 0.4s ease;
-}
-
-.nav-links a:hover {
-    color: #fff;
-    /* Light bloom on links too */
-    text-shadow: 0 0 10px #fff;
-}
-@keyframes flicker {
-    0%, 18%, 22%, 25%, 53%, 57%, 100% { text-shadow: 0 0 10px #fff, 0 0 20px #fff; }
-    20%, 24%, 55% { text-shadow: none; opacity: 0.5; }
-}
-
-.logo {
-    animation: flicker 5s infinite alternate;
-}
-
-.hero-container {
-    height: 40vh;
+/* 2. Header & Branding */
+header {
+    perspective: 1000px; 
+    padding: 50px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    background: #05050500;
 }
 
-#typing-text {
-    font-family: 'Major Mono Display', monospace;
-    font-size: 3.5rem; /* Larger for impact */
-    color: #fff;
-    letter-spacing: 10px;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-    
-    /* The Blinking Cursor */
-    border-right: 4px solid #fff;
-    padding-right: 12px;
-    animation: cursor-blink 0.8s step-end infinite;
+.site-logo {
+    width: 250px;
+    height: auto;
+    /* Smooth transition so it doesn't "snap" back */
+    transition: transform 0.1s ease-out, filter 0.3s;
+    transform-style: preserve-3d;
+    filter: drop-shadow(0 10px 5px   rgba(0, 0, 0, 0.596));
+}  
+
+header h1 {
+    font-family: "Datatype", monospace;
+    margin: 0;
+    font-size: 2.5rem;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-top: 25px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.623);
 }
 
-@keyframes cursor-blink {
-    from, to { border-color: transparent }
-    50% { border-color: white; }
-}
-
-.tabs {
+/* 3. Navigation Menu */
+.navigation {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-bottom: 3rem;
-}
-
-.tab-btn {
-    background: none;
-    border: none;
-    color: rgba(255,255,255,0.4);
-    font-family: 'Major Mono Display', monospace;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 10px 20px;
-    transition: 0.4s;
-    border-bottom: 2px solid transparent;
-}
-
-.tab-btn.active {
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    text-shadow: 0 0 15px #fff; /* Bloom Effect */
-}
-
-.tab-text {
-font-family: "Blinker", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    margin-top: 1rem;
     
-    text-shadow: 0 0 15px #fff;
 }
 
-.panel {
-    display: none; /* Hide panels by default */
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 1.0s ease-out, transform 1.0s ease-out;
-}
-
-
-.panel.active {
-     display: block; /* Use grid to show mod cards */
-    grid-template-columns: repeat(auto-fit, minmax(500px, 5fr));
-    gap: 2rem;
-    
-    align-items: start;
-    text-align: left;
-}
-
-.panel.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-.unmute-btn {
-   background: none;
-    border: none;
-    color: rgba(255,255,255,0.4);
-    font-family: 'Major Mono Display', monospace;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 10px 20px;
-    transition: 0.4s;
-    border-bottom: 2px solid transparent;
-}
-
-
-
-.unmute-btn.active {
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    text-shadow: 0 0 15px #fff; /* Bloom Effect */
-}
-
-.stats-container {
+nav {
+    position: sticky; /* Keeps it at the top */
+    top: 20px;       /* Adds a little breathing room from the top */
+    z-index: 100;
+    width: 50%;
+    margin: 0 auto;   /* Centers the 50% width box */
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    
+    
+    
+    /* The Gradient Border Magic */
+    border: 5px solid transparent;
+    border-radius: 900px;
+    background-image: 
+        linear-gradient(to top, #0e0e0e, #141414), 
+        linear-gradient(to top, #0c0c0c, #242424); /* Your border colors */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    
+    
 }
 
-.stats-card {
-    position: relative;
-    width: 350px;
-    background: var(--glass, rgba(255, 255, 255, 0.05));
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease;
-    z-index: 1;
+nav:hover {
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.623);
+   transform: scale(1.05)
 }
 
-/* Hover Background Image Layer */
-.stats-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: var(--bg-img);
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.9s ease;
-    z-index: -1;
-}
-
-.stats-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: var(--accent, #58a6ff);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-.stats-card:hover::before {
-    opacity: 1;
-}
-
-.stats-img {
-    height: 140px;
-    border-radius: 10px;
-    width: 140px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    background-size: cover;
-    background-position: center;
-    overflow: visible;
-    margin: 10px;
-    object-fit: contain;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.stats-content {
-    padding: 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.6rem;
-}
-
-.stats-content span {
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-    font-family: 'Major Mono Display', monospace;
+    justify-content: center;
+    gap: 50px;
+    
+    
 }
 
-.stats-content b {
-    color: rgba(255, 255, 255, 0.8);
+nav li a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+    font-family: "Source Code Pro", monospace;
+    background-image: transparent;
+    transition: box-shadow 5.3s ease background-image 99.3s ease;
+    
+    
 }
 
-.stats-content:hover span {
-    text-shadow: 0 0 15px #ffffff;
-    color: rgb(255, 255, 255);
-    transition: all 0.3s ease; /* Adds a smooth glow effect */
+nav li a:hover {
+    background-image: 
+    linear-gradient(to right, #cccccc, #ffffff), 
+    linear-gradient(to right, #cccccc, #ffffff);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.514);
+    color: #0f172a;
+    font-weight: bold;
+    border-radius: 900px;
+    transition: box-shadow 0.3s ease, background-image 99.3s ease;
+    
 }
 
-.blr-stats {
-  background-color: rgba(0, 0, 0, 0.589); /* Translucent */
-  transition: backdrop-filter 0.3s ease, background-color 0.3s ease; /* Smooth hover */
-  overflow: hidden;
+/* 4. Main Content Area */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+section {
+     background-image: 
+        linear-gradient(to top, #0e0e0e, #141414),
+        linear-gradient(to top, #0e0e0e, #242424);
+     /* Semi-transparent navy */
+    backdrop-filter: blur(12px);       /* The "Glass" look */
+    border: 5px solid transparent;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.05)  
+}
+
+.tab-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.tabcontent {
+  
+  grid-area: 1 / 1; /* All tabs share this cell */
+  
+  /* Start hidden but NOT removed from layout */
+  visibility: hidden;
+  opacity: 0;
+  
+  /* Smoothly transition both over 9 seconds */
+  transition: opacity 2s ease, visibility 2s ease;
+  pointer-events: none; /* Prevents clicking invisible buttons */
   
 }
 
-.blr-stats::hover {
-  backdrop-filter: blur(9px);
-  background-color: rgba(0, 0, 0, 0.829); /* Make it slightly more opaque on hover */
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+.tabcontent.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto; /* Re-enables interaction */
+  z-index: 2; /* Ensures new tab is on top */
 }
 
-.text {
- color: #ffffff;
+h2 {
+    font-family: "Datatype", monospace;
+    color: #e6e6e6;
+    border-left: 4px solid #e6e6e6;
+    padding-left: 15px;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    font-family: "Source Code Pro", monospace;
+}
+
+/* 5. Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 4rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
 }
