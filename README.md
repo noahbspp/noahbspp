@@ -52,12 +52,6 @@ I'm a **Software Developer**, **Cybersecurity Analyst**, *passionate about onlin
 </div>
 <br>
 <div align="center">
-  <h1>------------ My YouTube Stats ------------</h1>
-  <img src="https://img.shields.io/youtube/channel/subscribers/UCkAQWJQhkrVyZrSUVP4CTkA?style=for-the-badge" />
-  <img src="https://img.shields.io/youtube/channel/views/UCkAQWJQhkrVyZrSUVP4CTkA?style=for-the-badge" />
-</div>
-<br>
-<div align="center">
   <h1>------------ My GitHub Commit Graph ------------</h1>
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=transcrimee&bg_color=1a1b27&color=40bfb0&line=70a5fd&point=70a5fd&area=true&hide_border=true" width="100%" alt="transcrimee activity graph" />
 </div>
