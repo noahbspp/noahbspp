@@ -3,3 +3,6 @@ baseurl: "/Transcrimee"
 layout: default
 permalink: /:basename/
 permalink: pretty
+
+include:
+  - .well-known
