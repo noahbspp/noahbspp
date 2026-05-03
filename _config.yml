@@ -1,5 +1,5 @@
 url: "https://transcrime.com"
-baseurl: "/Transcrimee"
+baseurl: ""
 layout: default
 permalink: /:basename/
 permalink: pretty
