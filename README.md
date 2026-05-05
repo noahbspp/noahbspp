@@ -58,5 +58,5 @@ I'm a **Software Developer**, **Cybersecurity Analyst**, *passionate about onlin
 <br>
 <div align="center">
   <h1>------------ My daily used Tool ------------</h1>
-  <img src="https://skillicons.dev/icons?i=git,windows,linux,docker,nvim,discord,blender,unity" />
+  <img src="https://skillicons.dev/icons?i=git,windows,linux,docker,vim,blender,unity" />
 </div>
