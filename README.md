@@ -27,10 +27,8 @@ I am a Software Developer and CyberSecurity Analyst dedicated to **online freedo
 ---
 
 ### 📫 Connect with me
-[<img src="https://img.shields.io/badge/Email-email?style=flat&logo=mail
-" />](mailto:crime@theft.bio)
-[<img src="https://img.shields.io/badge/Mastodon-mastodon?style=flat&logo=mail&color=blue
-" />](https://mastodon.social/@transcrime)
+[<img src="https://img.shields.io/badge/Email-email?style=flat&logo=mail"/>](mailto:crime@theft.bio)
+[<img src="https://img.shields.io/badge/Mastodon-mastodon?style=flat&logo=mail&color=blue"/>](https://mastodon.social/@transcrime)
 
 <br>
 
