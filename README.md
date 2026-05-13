@@ -1,4 +1,9 @@
-# Software Developer & CyberSecurity Analyst 🛡️
+<div style="display: inline-block; width: 100px;">
+<h1>Software Developer & CyberSecurity Analyst 🛡️</h1>
+<img src="https://img.shields.io/badge/1E58D941AC8D1E-gpgid?style=plastic&logo=gnuprivacyguard&logoColor=%2310b981&label=GPG%20Key&labelColor=%23111111&color=%2310b981"/>
+<img src="https://img.shields.io/badge/ED25519-gpgid?style=plastic&logo=openaccess&logoColor=%2310b981&label=SSH%20Key&labelColor=%23111111&color=%2310b981"/>
+</div>
+
 ---
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Source+Code+Pro+&duration=1&pause=500&color=00E9F7&vCenter=true&repeat=false&width=435&lines=T;r;a;n;s;Trans)](https://git.io/typing-svg)
 ---
